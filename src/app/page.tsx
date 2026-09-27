@@ -1,5 +1,5 @@
-import { Hero } from "@/components/hero";
-import { WorkoutLibrary } from "@/components/workout-library";
+import { Hero } from "@/app/components/hero";
+import { WorkoutLibrary } from "@/app/components/workout-library";
 
 export default function Home() {
   return (

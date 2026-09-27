@@ -71,21 +71,21 @@ button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible
 .footer-brand .brand-mark svg { width: 18px; height: 18px; }
 .footer-inner p { margin: 0; color: var(--muted); font-size: 11px; }
 
-.hero { width: min(1320px, calc(100% - 80px)); min-height: 570px; margin: 54px auto 0; display: grid; grid-template-columns: .94fr 1.06fr; }
-.hero-copy { padding: 52px 48px 32px 2px; position: relative; display: flex; flex-direction: column; align-items: flex-start; }
+.hero { width: min(1320px, calc(100% - 80px)); min-height: 410px; margin: 44px auto 0; display: grid; grid-template-columns: 1.45fr .55fr; align-items: center; overflow: hidden; border: 1px solid #262832; border-radius: 14px; background: #15161e; }
+.hero-copy { padding: 48px 0 48px 52px; position: relative; display: flex; flex-direction: column; align-items: flex-start; }
 .eyebrow { display: flex; align-items: center; gap: 10px; color: var(--muted); font-size: 9px; letter-spacing: .2em; font-weight: 800; }
 .eyebrow-dot { display: inline-block; width: 7px; height: 7px; flex: 0 0 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 12px #caff0050; }
 .hero h1, .detail-copy h1, .plan-title-row h1, .not-found h1 {
   margin: 30px 0 18px;
   font-family: var(--font-display);
-  font-size: clamp(58px, 7.1vw, 94px);
+  font-size: clamp(45px, 5.4vw, 66px);
   font-weight: 900;
   line-height: .92;
   letter-spacing: -.035em;
   text-transform: uppercase;
 }
 .hero h1 span, .section-heading h2 span, .plan-title-row h1 span, .not-found h1 span { color: var(--accent); }
-.hero-copy > p { max-width: 410px; margin: 0 0 26px; color: #b2b3ac; font-size: 14px; line-height: 1.8; }
+.hero-copy > p { max-width: 500px; margin: 0 0 22px; color: #a1a4af; font-size: 14px; line-height: 1.7; }
 .button { min-height: 49px; display: inline-flex; align-items: center; justify-content: center; gap: 16px; padding: 0 20px; border: 1px solid transparent; font-size: 10px; font-weight: 900; letter-spacing: .12em; cursor: pointer; transition: background .2s, color .2s, border-color .2s, transform .2s; }
 .button svg { width: 17px; height: 17px; }
 .button-primary { background: var(--accent); color: #101110; }
@@ -93,17 +93,9 @@ button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible
 .button-primary:disabled { opacity: .58; cursor: not-allowed; }
 .button-secondary { border-color: #555750; color: var(--foreground); background: transparent; }
 .button-secondary:hover, .button-secondary.is-saved { border-color: var(--accent); color: var(--accent); }
-.hero-footnote { display: flex; align-items: center; gap: 12px; margin-top: auto; color: var(--muted); font-size: 8px; letter-spacing: .18em; font-weight: 700; }
-.hero-footnote span { color: var(--accent); }
-.hero-footnote i, .library-endnote i, .plan-bottomline i { width: 54px; height: 1px; background: var(--line); }
-.hero-visual { min-height: 570px; position: relative; overflow: hidden; background: #343b32; }
-.hero-visual > img { object-fit: cover; object-position: center 38%; filter: saturate(.73) contrast(1.05); }
-.hero-image-shade { position: absolute; inset: 0; background: linear-gradient(180deg, #14171335 0%, transparent 35%, #101110c9 100%), linear-gradient(90deg, #1011102b, transparent 60%); }
-.hero-visual-top { position: absolute; inset: 22px 24px auto; display: flex; justify-content: space-between; color: #f2f2ecb8; font-size: 8px; letter-spacing: .18em; font-weight: 800; }
-.hero-image-caption { position: absolute; left: 30px; right: 30px; bottom: 28px; display: flex; align-items: end; justify-content: space-between; }
-.hero-image-caption span { font-family: var(--font-display); font-size: clamp(35px, 4.2vw, 56px); line-height: .9; letter-spacing: -.02em; }
-.hero-image-caption b { color: var(--accent); font-size: 8px; letter-spacing: .17em; }
-.hero-vertical-label { position: absolute; right: 18px; top: 50%; writing-mode: vertical-rl; transform: translateY(-50%); font-size: 8px; letter-spacing: .22em; color: #fff9; }
+.library-endnote i, .plan-bottomline i { width: 54px; height: 1px; background: var(--line); }
+.hero-visual { min-height: 410px; height: 100%; position: relative; display: grid; place-items: center; overflow: hidden; background: #15161e; }
+.hero-visual > img { display: block; width: min(280px, 78%); height: auto; object-fit: contain; }
 
 .section-wrap { width: min(1320px, calc(100% - 80px)); margin: 112px auto 0; }
 .section-heading { display: flex; align-items: end; justify-content: space-between; padding-bottom: 27px; border-bottom: 1px solid var(--line); }
@@ -239,9 +231,11 @@ button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible
 
 @media (max-width: 1050px) {
   .content-shell, .header-inner, .footer-inner, .hero, .section-wrap { width: min(100% - 48px, 1320px); }
-  .hero { min-height: 510px; }
-  .hero-copy { padding-right: 28px; }
-  .hero-visual { min-height: 510px; }
+  .hero { min-height: 390px; grid-template-columns: 1.25fr .75fr; }
+  .hero-copy { padding-left: 36px; padding-right: 10px; }
+  .hero h1 { font-size: clamp(44px, 6.1vw, 61px); }
+  .hero-visual { min-height: 390px; }
+  .hero-visual > img { width: min(245px, 90%); }
   .workout-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
   .card-image { height: 225px; }
   .detail-layout { gap: 30px; }
@@ -264,11 +258,11 @@ button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible
   .counter-badge { min-width: auto; height: 30px; gap: 5px; padding: 0 8px; font-size: 7px; }
   .counter-badge b { font-size: 10px; }
   .hero { margin-top: 22px; grid-template-columns: 1fr; }
-  .hero-copy { padding: 36px 0 25px; min-height: 390px; }
-  .hero h1 { margin: 23px 0 15px; font-size: clamp(59px, 14vw, 84px); }
-  .hero-copy > p { font-size: 12px; }
-  .hero-visual { min-height: 370px; }
-  .hero-image-caption span { font-size: 44px; }
+  .hero-copy { padding: 32px 24px 8px; min-height: auto; }
+  .hero h1 { margin: 20px 0 13px; font-size: clamp(37px, 10vw, 50px); }
+  .hero-copy > p { max-width: 440px; font-size: 12px; }
+  .hero-visual { min-height: 260px; height: 260px; }
+  .hero-visual > img { width: min(210px, 62%); max-height: 248px; }
   .section-wrap { margin-top: 74px; }
   .section-heading h2 { font-size: 47px; }
   .section-heading > div > p { max-width: 225px; font-size: 11px; line-height: 1.55; }

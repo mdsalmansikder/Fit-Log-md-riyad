@@ -1,8 +1,8 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { WorkoutCard } from "@/components/workout-card";
-import { Icon } from "@/components/icon";
+import { WorkoutCard } from "@/app/components/workout-card";
+import { Icon } from "@/app/components/icon";
 import { useWorkouts } from "@/hooks/use-workouts";
 
 type SortKey = "duration" | "caloriesBurned" | "rating";

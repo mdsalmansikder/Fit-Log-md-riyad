@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { DetailActions } from "@/components/detail-actions";
-import { Icon } from "@/components/icon";
+import { DetailActions } from "@/app/components/detail-actions";
+import { Icon } from "@/app/components/icon";
 import { getWorkout } from "@/lib/fitlog";
 
 export default async function WorkoutDetails({

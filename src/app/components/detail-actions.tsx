@@ -1,7 +1,7 @@
 "use client";
 
-import { useFitLog } from "@/components/fitlog-provider";
-import { Icon } from "@/components/icon";
+import { useFitLog } from "@/app/components/fitlog-provider";
+import { Icon } from "@/app/components/icon";
 import type { Workout } from "@/lib/fitlog";
 
 export function DetailActions({ workout }: { workout: Workout }) {

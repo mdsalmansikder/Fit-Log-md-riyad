@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Icon } from "@/components/icon";
+import { Icon } from "@/app/components/icon";
 
 export function SiteFooter() {
   return (

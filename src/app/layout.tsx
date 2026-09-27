@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { FitLogProvider } from "@/components/fitlog-provider";
-import { SiteFooter } from "@/components/site-footer";
-import { SiteHeader } from "@/components/site-header";
-import { Toast } from "@/components/toast";
+import { FitLogProvider } from "@/app/components/fitlog-provider";
+import { SiteFooter } from "@/app/components/site-footer";
+import { SiteHeader } from "@/app/components/site-header";
+import { Toast } from "@/app/components/toast";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -27,10 +27,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col">
         <FitLogProvider>
           <SiteHeader />
-          <main className="site-main">{children}</main>
-          <SiteFooter />
+          <main className="site-main">
+            {children}
+
+            </main>
+            <SiteFooter />
           <Toast />
         </FitLogProvider>
+
       </body>
     </html>
   );

@@ -4,8 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { Icon } from "@/components/icon";
-import { useFitLog } from "@/components/fitlog-provider";
+import { Icon } from "@/app/components/icon";
+import { useFitLog } from "@/app/components/fitlog-provider";
 import { useWorkouts } from "@/hooks/use-workouts";
 import type { Workout } from "@/lib/fitlog";
 

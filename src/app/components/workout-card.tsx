@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Workout } from "@/lib/fitlog";
-import { Icon } from "@/components/icon";
+import { Icon } from "@/app/components/icon";
 
 export function WorkoutCard({ workout }: { workout: Workout }) {
   return (
